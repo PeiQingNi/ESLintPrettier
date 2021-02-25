@@ -1,4 +1,4 @@
-### [Prettier](https://prettier.io)
+### Prettier(https://prettier.io)
 
 > 安装
 
@@ -6,7 +6,7 @@
 yarn add prettier --dev
 ```
 
-> 配置文件
+> config file
 
 ```
 // .prettierrc.json
@@ -23,7 +23,9 @@ module.exports = {
 }
 ```
 
-> ignore
+format options：https://prettier.io/docs/en/options.html
+
+> ignore file
 
 ```
 // .prettierignore
@@ -32,16 +34,36 @@ node_modules
 ...
 ```
 
-> cmd + s
+> manual（手动） format
+
+```
+// format all files
+prettier --write .
+
+// format a certain（某一） directory
+prettier --write src/
+
+// format a certain file
+prettier --write src/index.js
+
+// format all .js in a dirctory
+prettier --write src/**/*.js
+```
+
+> cmd + s （保存时自动格式化）
 
 1. Webstorm > Preferences > Tools > File Watchers
 
 2. `+` > Prettier
 
 
-### prettier && [husky](https://typicode.github.io/husky/#/) && [lint-staged](https://github.com/okonet/lint-staged#readme)
+### prettier && husky && lint-staged
 
 *注意：* 使用 `husky` 之前，项目必须 `git init` 过。
+
+*husky：*(https://typicode.github.io/husky/#/)
+
+*lint-staged：*(https://github.com/okonet/lint-staged#readme)
 
 > 安装
 
@@ -84,7 +106,7 @@ eslint --init
 
 > 配置 prettier
 
-[eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#readme)
+*eslint-plugin-prettier：*(https://github.com/prettier/eslint-plugin-prettier#readme)
 
 ```
 yarn add eslint-plugin-prettier --dev
